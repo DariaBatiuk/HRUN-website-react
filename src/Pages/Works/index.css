@@ -1,0 +1,24 @@
+.work__header {
+  margin: 140px auto 40px auto;
+  text-align: center;
+}
+.project__section {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+	margin-bottom: 160px;
+}
+.project__subheader {
+  color: var(--Main-blue, #182963);
+  margin-bottom: 12px;
+}
+.project__image {
+  width: 640px;
+  height: 380px;
+  border-radius: 20px;
+  background: #edf8fe;
+  background-size: cover;
+  background-position: center;
+  /* Другие стили, если необходимо */
+}
+

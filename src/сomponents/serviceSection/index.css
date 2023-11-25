@@ -1,0 +1,33 @@
+.serviceSection {
+  margin-top: 162px;
+  text-align: center;
+}
+.service__wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.service__descr {
+	margin-left: 149px;
+	padding-top: 40px;
+	width: 40%;
+	text-align: left;
+}
+.service__offers {
+	list-style-type: none;
+	padding-left: 0;
+	width: 65%;
+}
+.service__list {
+	margin: 24px 0;
+	display: flex;
+	justify-content: space-between;
+	color: #182963;
+	cursor: pointer;
+	text-decoration: none;
+}
+.arrow {
+	height: 40px;
+	width: 40px;
+	cursor: pointer;
+}

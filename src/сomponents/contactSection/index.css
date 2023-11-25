@@ -1,0 +1,97 @@
+.contact {
+  margin-top: 160px;
+	margin-bottom: 120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.contact__wrapper {
+	width: 50%;
+}
+.contact__title {
+	margin-bottom: 15px;
+}
+.contact__descr {
+	width: 530px;
+	margin-top: 31px;
+	margin-bottom: 45px;
+}
+.contact__icons {
+	display: flex;
+	flex-direction: column;
+	gap: 38px;
+}
+.contact__icons_phone,
+	.contact__icons_email {
+		display: flex;
+		gap: 12px;
+		align-items: center;
+	}
+.contact__form{
+	/* width: 50%; */
+}
+.contact__feed-form {
+	display: grid;
+	justify-content: space-between;
+	row-gap: 24px;
+}
+.contact__input {
+	position: relative;
+	width: 530px;
+}
+#name, #phone, #email {
+	width: 100%;
+	height: 44px;
+	padding: 12px 8px;
+	align-items: center;
+	border-radius: 8px;
+	border: 1px solid #2ec3e2;
+	background: #f8fbff;
+}
+textarea {
+	width: 100%;
+	height: 64px;
+	border-radius: 8px;
+	border: 1px solid #2ec3e2;
+	background: #f8fbff;
+}
+label {
+	position: absolute;
+}
+.contact__comment {
+	color: #8e93a2;
+	font-size: 20px;
+	font-weight: 400;
+	margin-bottom: -9px;
+}
+.contact__triggers {
+	margin-top: -16px;
+	/* Скрываем оригинальный чекбокс */
+	/* // .checkbox {
+	//   display: none;
+	// } */
+
+	 /* Стилизация метки, чтобы она выглядела как SVG */
+	/* // .checkbox + label {
+	//   display: inline-block;
+	//   width: 18px;
+	//   height: 18px;
+	//   background: url("../../icons/Group.svg") center center no-repeat;
+	//   cursor: pointer;
+	// } */
+
+	 /* Определение стилей для отмеченного чекбокса */
+	/* // .checkbox:checked + label {
+	//   background: url("../../icons/Group.svg") center center no-repeat;
+	// 	color: #000;
+	// } */
+}
+.contact__policy{
+	display: flex;
+	gap: 8px;
+	margin-bottom: 40px;
+}
+a{
+	text-decoration: underline;
+	color: #8e93a2;
+}

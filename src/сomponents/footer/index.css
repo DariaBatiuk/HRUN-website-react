@@ -1,0 +1,66 @@
+
+
+footer{
+	padding: 48px 70px 73px 70px;
+	display: flex;
+	justify-content: space-between;
+	background: var(--light-blue-footer, #EDF8FE);
+}
+.footer__social{
+	margin-top: 48px;
+	display: flex;
+    gap: 16px;
+    margin-bottom: 104px;
+}
+
+#footer__input_email {
+  position: relative;
+	margin-top: 12px;
+  width: 309px;
+  height: 44px;
+  padding: 12px 8px;
+  border: 1px solid var(--Ocean-Blue, #2EC3E2);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-right: 30px;
+  background-color: var(--light-blue-footer, #EDF8FE);
+}
+
+#footer__input_email::before {
+  content: url('../../icons/arrow-small.svg');
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+}
+.footer__heading{
+	color: var(--Ocean-Blue, #2EC3E2);
+	font-size: 20px;
+	font-weight: 700;
+	margin-bottom: 24px;
+}
+.footer__subheader{
+	font-size: 20px;
+	font-weight: 400;
+}
+.footer__subheader {
+  white-space: pre-line; /* Позволяет сохранить переносы строк */
+}
+
+.footer__subheader br {
+  margin-top: 12px; /* Устанавливает верхний отступ после каждого <br> */
+}
+
+.footer__subheader_item{
+	margin-bottom: 12px;
+}
+
+
+
+
+
+

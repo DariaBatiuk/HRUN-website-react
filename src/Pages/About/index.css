@@ -1,0 +1,63 @@
+.about{
+	margin-bottom: 30px;
+}
+.about__header {
+  text-align: center;
+  transform: translateX(10%); /* Сместить назад на 10% для коррекции на 60/40 */
+  /* Остальные стили */
+}
+.about__descr {
+  width: 418px;
+  margin: 0 auto;
+  margin-top: 12px;
+  transform: translateX(25%); /* Сместить назад на 10% для коррекции на 60/40 */
+}
+.about__subtitle {
+  width: 418px;
+  margin: 0 auto;
+  margin-top: 24px;
+  transform: translateX(25%); /* Сместить назад на 10% для коррекции на 60/40 */
+  color: var(--Main-blue, #182963);
+}
+.about__name {
+  color: var(--Primary-color, #12a6c8);
+  text-align: right;
+}
+.about__values{
+	text-align: center;
+	margin-top: 160px;
+}
+.values__wrapper{
+	display: flex;
+	margin-top: 40px;
+	gap: 20px;
+}
+.valueBlock{
+	text-align: start;
+	padding: 20px;
+}
+.value__title__wrapper{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+.value__title{
+	color: var(--Main-blue, #182963);
+}
+.about__team{
+	margin-top: 160px;
+	text-align: center;
+}
+.team__descr{
+	text-align: start;
+	width: 420px;
+	margin-top: 12px;
+}
+.team__section{
+	display: flex;
+	margin-top: 40px;
+	justify-content: space-between;
+}
+.team__img{
+	margin-bottom: 24px;
+}

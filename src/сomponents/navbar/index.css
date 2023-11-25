@@ -1,0 +1,65 @@
+nav {
+	margin-top: 50px;
+	height: 82px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 122px;
+}
+
+.logo {
+	width: 156px;
+}
+/* Скрыть горизонтальное меню и показать гамбургер-иконку на мобильных устройствах */
+@media only screen and (max-width: 320px) {
+	.logo{
+		width: 99px;
+	}
+  .promo__menu {
+    position: relative;
+  }
+
+  .promo__list {
+    list-style-type: none;
+    display: none; /* Скрыть список меню */
+    flex-direction: column;
+    width: 100%; /* Меню на всю ширину */
+    position: absolute;
+    top: 50px; /* Отступ сверху, равный высоте гамбургер-иконки */
+    left: 0;
+    background-color: white;
+    border-top: 1px solid #ccc; /* Линия под гамбургер-иконкой */
+    z-index: 10;
+  }
+
+  .promo__link {
+    padding: 10px; /* Отступ для ссылок в меню */
+    display: block; /* Сделать ссылки блочными элементами */
+    color: black; /* Цвет текста ссылок */
+    text-align: center; /* Выравнивание текста по центру */
+    border-bottom: 1px solid #ccc; /* Линия между пунктами меню */
+  }
+
+  .hamburger {
+    display: block; /* Показать иконку гамбургера */
+    cursor: pointer;
+    position: absolute; /* Расположить иконку гамбургера внутри .promo__menu */
+    top: 0; /* Расположить в верхнем углу */
+    right: 0; /* Прижать к правому краю */
+  }
+
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  .slidecontainer {
+    display: none; /* Скрыть слайдер на мобильных устройствах */
+  }
+}
+
+
