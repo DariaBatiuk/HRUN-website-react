@@ -66,5 +66,13 @@
 }
 .hamburger{
 	border: none;
-	background: transparent;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+	 /* Ваши стили для кнопки гамбургера */
+	 cursor: pointer;
+	 background: none;
+}
+/* Анимация для поворота иконки */
+.hamburger.rotate {
+  transform: rotate(180deg);
 }

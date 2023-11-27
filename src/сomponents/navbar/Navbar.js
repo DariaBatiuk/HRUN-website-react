@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../responsive.css';
 import './index.css';
 import logo from '../../icons/Logo.png';
 import PrimaryBtn from '../primaryBtn/PrimaryBtn';
@@ -7,7 +8,7 @@ import { Link } from 'react-router-dom'; // Импорт Link из react-router-
 
 const Navbar = () => {
   return (
-    <nav>
+    <nav className='nav'>
       <div className="promo__logo">			
         {/* Используем Link для перехода на домашнюю страницу */}
         <Link to="/">

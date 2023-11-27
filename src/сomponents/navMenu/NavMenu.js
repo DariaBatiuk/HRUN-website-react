@@ -1,11 +1,55 @@
 import React, { useState, useEffect } from "react";
+import '../../responsive.css';
 import "./index.css";
 import { Link, useLocation } from "react-router-dom"; // Импортируем useLocation
 
 function NavMenu() {
   const location = useLocation(); // Получаем текущий маршрут
   const [sliderValue, setSliderValue] = useState(1); // Состояние для значения слайдера
- 
+  const crossIcon = (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="22"
+      height="23"
+      viewBox="0 0 22 23"
+      fill="none"
+    >
+      <path
+        d="M21 21.5L1 1.5M21 1.5L1 21.5"
+        stroke="#182963"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+  const hamburgerIcon = (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="30"
+      height="30"
+      viewBox="0 0 30 30"
+      fill="none"
+    >
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M1.875 5.625C1.875 4.93464 2.43464 4.375 3.125 4.375H26.875C27.5654 4.375 28.125 4.93464 28.125 5.625C28.125 6.31536 27.5654 6.875 26.875 6.875H3.125C2.43464 6.875 1.875 6.31536 1.875 5.625Z"
+        fill="#182963"
+      />
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M1.875 15C1.875 14.3096 2.43464 13.75 3.125 13.75H26.875C27.5654 13.75 28.125 14.3096 28.125 15C28.125 15.6904 27.5654 16.25 26.875 16.25H3.125C2.43464 16.25 1.875 15.6904 1.875 15Z"
+        fill="#182963"
+      />
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M1.875 24.375C1.875 23.6846 2.43464 23.125 3.125 23.125H26.875C27.5654 23.125 28.125 23.6846 28.125 24.375C28.125 25.0654 27.5654 25.625 26.875 25.625H3.125C2.43464 25.625 1.875 25.0654 1.875 24.375Z"
+        fill="#182963"
+      />
+    </svg>
+  );
 
   // Функция для обновления положения слайдера
   const updateSliderPosition = (path) => {
@@ -32,33 +76,41 @@ function NavMenu() {
 
   return (
     <div className="promo__menu">
-      <button className="hamburger" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
-          <path fillRule="evenodd" clipRule="evenodd" d="M1.875 5.625C1.875 4.93464 2.43464 4.375 3.125 4.375H26.875C27.5654 4.375 28.125 4.93464 28.125 5.625C28.125 6.31536 27.5654 6.875 26.875 6.875H3.125C2.43464 6.875 1.875 6.31536 1.875 5.625Z" fill="#182963"/>
-          <path fillRule="evenodd" clipRule="evenodd" d="M1.875 15C1.875 14.3096 2.43464 13.75 3.125 13.75H26.875C27.5654 13.75 28.125 14.3096 28.125 15C28.125 15.6904 27.5654 16.25 26.875 16.25H3.125C2.43464 16.25 1.875 15.6904 1.875 15Z" fill="#182963"/>
-          <path fillRule="evenodd" clipRule="evenodd" d="M1.875 24.375C1.875 23.6846 2.43464 23.125 3.125 23.125H26.875C27.5654 23.125 28.125 23.6846 28.125 24.375C28.125 25.0654 27.5654 25.625 26.875 25.625H3.125C2.43464 25.625 1.875 25.0654 1.875 24.375Z" fill="#182963"/>
-        </svg>
+      <button
+        className={`hamburger ${isMenuOpen ? "rotate" : ""}`}
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+      >
+        {isMenuOpen ? crossIcon : hamburgerIcon}
       </button>
 
       <ul className={`promo__list ${isMenuOpen ? "open" : ""}`}>
         <li>
-          <Link to="/" className="promo__link p1">
-            Home
+          <Link to="/" className="promo__link ">
+					Home
+						<span className="promo__link-text p1">
+						
+						</span>
           </Link>
         </li>
         <li>
           <Link to="/services" className="promo__link p1">
-            Services
+					<span className="promo__link-text p1">
+					Services
+					</span>
           </Link>
         </li>
         <li>
           <Link to="/about" className="p1 promo__link">
-            About us
+					<span className="promo__link-text p1">
+					About us
+					</span>
           </Link>
         </li>
         <li>
           <Link to="/work" className="p1 promo__link">
-            Our work
+					<span className="promo__link-text p1">
+					Our work
+					</span>
           </Link>
         </li>
       </ul>
