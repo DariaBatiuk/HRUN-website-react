@@ -65,6 +65,7 @@
 	cursor: pointer;
 }
 .hamburger{
+	display: none;
 	border: none;
   cursor: pointer;
   transition: transform 0.3s ease;
@@ -75,4 +76,10 @@
 /* Анимация для поворота иконки */
 .hamburger.rotate {
   transform: rotate(180deg);
+}
+@media only screen and (max-width: 425px) {
+  .hamburger {
+    display: block; /* Показываем кнопку гамбургера на мобильных устройствах */
+    /* Здесь можно добавить дополнительные стили для мобильной версии */
+  }
 }

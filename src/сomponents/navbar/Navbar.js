@@ -18,7 +18,7 @@ const Navbar = () => {
 
       <NavMenu />
       
-      <PrimaryBtn  />
+      <PrimaryBtn className="nav__btn" />
     </nav>
   );
 }

@@ -9,9 +9,9 @@ function Home() {
 	return (
 		<div>
 			<PromoSection />
-			<Approach />
-			<Service />
-			<Contact />
+			{/* <Approach /> */}
+			{/* <Service /> */}
+			{/* <Contact /> */}
 		</div>
 	)
 }

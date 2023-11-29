@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import '../../responsive.css';
+import "../../responsive.css";
 import "./index.css";
 import { Link, useLocation } from "react-router-dom"; // Импортируем useLocation
 
@@ -86,31 +86,22 @@ function NavMenu() {
       <ul className={`promo__list ${isMenuOpen ? "open" : ""}`}>
         <li>
           <Link to="/" className="promo__link ">
-					Home
-						<span className="promo__link-text p1">
-						
-						</span>
+            <span className="promo__link-text p1">Home</span>
           </Link>
         </li>
         <li>
           <Link to="/services" className="promo__link p1">
-					<span className="promo__link-text p1">
-					Services
-					</span>
+            <span className="promo__link-text p1">Services</span>
           </Link>
         </li>
         <li>
           <Link to="/about" className="p1 promo__link">
-					<span className="promo__link-text p1">
-					About us
-					</span>
+            <span className="promo__link-text p1">About us</span>
           </Link>
         </li>
         <li>
           <Link to="/work" className="p1 promo__link">
-					<span className="promo__link-text p1">
-					Our work
-					</span>
+            <span className="promo__link-text p1">Our work</span>
           </Link>
         </li>
       </ul>

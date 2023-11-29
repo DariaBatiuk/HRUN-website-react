@@ -2,36 +2,155 @@
   min-height: 100vh;
   /* // position: relative; */
   background: #fefeff no-repeat 50% / cover;
-	padding: 0;
+  padding: 0;
 }
 .promo__wrapper {
-	display: flex;
-	width: 970px;
-	/* // height: 380px; */
-	flex-direction: column;
-	justify-content: center;
-	margin: 0 auto;
+  display: flex;
+  width: 970px;
+  /* // height: 380px; */
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
 }
 h1 span:nth-child(1)::before {
-	content: "\00a0"; /* Неразрывный пробел */
-	margin-left: 110px; /* Отступ для второй строки после <br> */
+  content: "\00a0"; /* Неразрывный пробел */
+  margin-left: 110px; /* Отступ для второй строки после <br> */
 }
 h1 span:nth-child(2)::before {
-	content: "\00a0"; /* Неразрывный пробел */
-	margin-left: 0px; /* Отступ для второй строки после <br> */
+  content: "\00a0"; /* Неразрывный пробел */
+  margin-left: 0px; /* Отступ для второй строки после <br> */
 }
 
 h1 span:nth-child(3)::before {
-	content: "\00a0"; /* Неразрывный пробел */
-	margin-left: 110px; /* Отступ для третьей строки после <br> */
+  content: "\00a0"; /* Неразрывный пробел */
+  margin-left: 110px; /* Отступ для третьей строки после <br> */
 }
 span {
-	display: block;
-	font-weight: 700;
+  display: block;
+  font-weight: 700;
 }
 .promo__descr {
-	position: relative;
-	margin-left: 330px;
-	margin-bottom: 229px;
-	width: 420px;
+  position: relative;
+  margin-left: 330px;
+  margin-bottom: 229px;
+  width: 420px;
+}
+.mobile-btn {
+  display: none;
+}
+.promo__btn {
+  display: none;
+}
+
+@media only screen and (max-width: 425px) {
+  .promo__menu {
+    position: relative;
+  }
+  .promo__wrapper {
+    width: 100%;
+  }
+
+  .promo__list {
+    list-style-type: none;
+    display: none !important;
+    flex-direction: column;
+    width: 100%;
+    position: fixed;
+    top: 150px;
+    margin: 0 auto;
+    right: 0;
+    background-color: white;
+    /* border-top: 1px solid #ccc; */
+    z-index: 10;
+    list-style-type: none;
+    max-height: 0;
+    /* overflow: hidden; */
+    transition: max-height 0.3s ease-in-out;
+  }
+  /* Стили для открытого состояния списка */
+  .promo__list.open {
+    display: flex !important;
+    max-height: calc(
+      100vh - 50px
+    ); /* Высота на всю высоту экрана за вычетом высоты гамбургер-меню */
+  }
+
+  .promo__link {
+    padding: 10px;
+    display: block;
+    color: black;
+    text-align: center;
+    line-height: 140%;
+    font-size: 16px;
+  }
+  .promo__link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    /* bottom: -5px; */
+    transform: translateX(-50%);
+    width: 136px;
+    height: 1px;
+    background-color: #c5e6ea;
+    /* border-bottom: 1px solid;*/
+  }
+
+  .promo__link-text {
+    font-size: 16px;
+  }
+  /* Стили для изменения цвета при наведении */
+  .promo__link-text:hover {
+    color: var(--Primary-color, #12a6c8);
+    font-size: 20px;
+  }
+
+  /* Стили для изменения цвета при активации (клике) */
+  .promo__link-text:active {
+    color: var(--Primary-color, #12a6c8);
+    font-size: 20px;
+  }
+
+  .hamburger {
+    display: block; /* Показать иконку гамбургера */
+    cursor: pointer;
+    position: absolute; /* Расположить иконку гамбургера внутри .promo__menu */
+    top: 0; /* Расположить в верхнем углу */
+    right: 0; /* Прижать к правому краю */
+  }
+
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  .slidecontainer {
+    display: none; /* Скрыть слайдер на мобильных устройствах */
+  }
+  .promo__title {
+    font-size: 28px;
+    line-height: 106%;
+  }
+  h1 span:nth-child(1)::before {
+    margin-left: 52px !important; /* Отступ для второй строки после <br> */
+  }
+  h1 span:nth-child(3)::before {
+    margin-left: 40px !important; /* Отступ для третьей строки после <br> */
+  }
+  .promo__descr {
+    margin-left: 94px !important;
+    font-size: 16px;
+    line-height: 24px;
+    width: 210px;
+    margin-bottom: 40px;
+  }
+  .promo__btn {
+    display: block;
+    margin: 0 auto;
+    width: 288px;
+    text-align: center;
+  }
 }

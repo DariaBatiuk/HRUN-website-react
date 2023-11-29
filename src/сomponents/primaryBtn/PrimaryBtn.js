@@ -1,12 +1,15 @@
-import React from 'react'
+import React from 'react';
 import './index.css';
 
-function PrimaryBtn() {
-	return (
-		<a href="#contact" className="btn"> {/* Используем тег <a> для якорной ссылки */}
-		Contact us
-	</a>
-	)
+function PrimaryBtn({ className }) {
+  // Прямое использование переданного класса без внутренней логики
+  const buttonClassName = `btn ${className || ''}`;
+
+  return (
+    <a href="#contact" className={buttonClassName}>
+      Contact us
+    </a>
+  );
 }
 
 export default PrimaryBtn;

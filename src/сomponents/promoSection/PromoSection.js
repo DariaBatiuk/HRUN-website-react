@@ -1,24 +1,23 @@
-import React from "react";
+import React from 'react';
 import "./index.css";
+import PrimaryBtn from "../primaryBtn/PrimaryBtn";
 
 function PromoSection() {
   return (
- <div className="promo">
-		   <div class="promo__wrapper">
-      <h1 class="h1">
-        <span>We are here</span>
-        <span>to guide you</span>
-        <span>towards success</span>
-      </h1>
-      <p class="promo__descr p1">
-        We can help you to provide comprehensive branding services including
-        brand identity development.
-      </p>
-      {/* <!-- <button class="button button_promo" id="sign_up">
-						<a class="button button_promo" href="#signup">Sign Up</a>
-					</button> --> */}
+    <div className="promo">
+      <div className="promo__wrapper">
+        <h1 className="h1">
+          <span className="promo__title">We are here</span>
+          <span className="promo__title">to guide you</span>
+          <span className="promo__title">towards success</span>
+        </h1>
+        <p className="promo__descr p1">
+          We can help you to provide comprehensive branding services including
+          brand identity development.
+        </p>
+      </div>
+      <PrimaryBtn className="promo__btn" />
     </div>
- </div>
   );
 }
 
