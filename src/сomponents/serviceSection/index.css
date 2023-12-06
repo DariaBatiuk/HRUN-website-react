@@ -31,3 +31,27 @@
 	width: 40px;
 	cursor: pointer;
 }
+@media only screen and (max-width: 425px) {
+	.service__wrapper{
+		flex-direction: column;
+	}
+	.service__descr{
+		width: 100%;
+		margin-left: 0;
+		padding-top: 0;
+	}
+	.mobile-no-break {
+    display: inline; /* Убирает эффект блочного элемента, предотвращая перенос */
+  }
+	.service__offers{
+		margin-top: 24px;
+	}
+	.service__list{
+		align-items: center;
+		margin: 4px 0;
+	}
+	.arrow{
+		width: 30px;
+		height: 30px;
+	}
+}

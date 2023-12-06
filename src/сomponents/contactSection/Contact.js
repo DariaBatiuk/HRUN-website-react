@@ -24,8 +24,7 @@ function Contact() {
 					</div>
 					<div>
 					assistance.
-					</div>
-					 
+					</div>					 
         </div>
         <div className="contact__icons">
           <div className="contact__icons_phone">

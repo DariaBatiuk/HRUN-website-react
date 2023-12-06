@@ -14,7 +14,7 @@ body {
   box-sizing: border-box;
 }
 .container {
-	margin: 0 70px;
+  margin: 0 70px;
 }
 
 .p1 {
@@ -22,7 +22,7 @@ body {
   font-weight: 400;
   line-height: 26px;
   color: #35373f;
-	margin: 0;
+  margin: 0;
 }
 .p2 {
   color: #8e93a2;
@@ -52,8 +52,8 @@ body {
   font-weight: 700;
   line-height: 32px;
   font-size: 25px;
-	color: #000;
-	margin: 0;
+  color: #000;
+  margin: 0;
 }
 h4 {
   font-size: 20px;
@@ -61,4 +61,26 @@ h4 {
   line-height: 26px;
   color: #000;
   margin: 0;
+}
+@media only screen and (max-width: 425px) {
+  .h1 {
+    font-size: 28px;
+    margin-bottom: 24px;
+    line-height: normal;
+  }
+  .h2 {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 45px;
+  }
+	h4{
+		font-size: 16px;
+	}
+  .p2 {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+  }
 }

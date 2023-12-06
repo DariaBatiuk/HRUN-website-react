@@ -26,3 +26,8 @@
   outline: 1px solid var(--jagged-ice-for-elements, #c5e6ea);
   background: var(--light-blue-footer, #edf8fe);
 }
+@media only screen and (max-width: 425px) {
+	.btn_secondary{
+		width: 100%;
+	}
+}
