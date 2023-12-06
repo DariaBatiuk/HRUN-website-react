@@ -141,7 +141,7 @@ span {
     margin-left: 40px !important; /* Отступ для третьей строки после <br> */
   }
   .promo__descr {
-    margin-left: 94px !important;
+    margin-left: 20% ;
     font-size: 16px;
     line-height: 24px;
     width: 210px;

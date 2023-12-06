@@ -1,35 +1,33 @@
-
-
-footer{
-	padding: 48px 70px 73px 70px;
-	display: flex;
-	justify-content: space-between;
-	background: var(--light-blue-footer, #EDF8FE);
+footer {
+  padding: 48px 70px 73px 70px;
+  display: flex;
+  justify-content: space-between;
+  background: var(--light-blue-footer, #edf8fe);
 }
-.footer__social{
-	margin-top: 48px;
-	display: flex;
-    gap: 16px;
-    margin-bottom: 104px;
+.footer__social {
+  margin-top: 48px;
+  display: flex;
+  gap: 16px;
+  margin-bottom: 104px;
 }
 
 #footer__input_email {
   position: relative;
-	margin-top: 12px;
+  margin-top: 12px;
   width: 309px;
   height: 44px;
   padding: 12px 8px;
-  border: 1px solid var(--Ocean-Blue, #2EC3E2);
+  border: 1px solid var(--Ocean-Blue, #2ec3e2);
   border-radius: 8px;
   display: flex;
   align-items: center;
   gap: 8px;
   padding-right: 30px;
-  background-color: var(--light-blue-footer, #EDF8FE);
+  background-color: var(--light-blue-footer, #edf8fe);
 }
 
 #footer__input_email::before {
-  content: url('../../icons/arrow-small.svg');
+  content: url("../../icons/arrow-small.svg");
   position: absolute;
   right: 20px;
   top: 50%;
@@ -37,15 +35,15 @@ footer{
   width: 24px;
   height: 24px;
 }
-.footer__heading{
-	color: var(--Ocean-Blue, #2EC3E2);
-	font-size: 20px;
-	font-weight: 700;
-	margin-bottom: 24px;
+.footer__heading {
+  color: var(--Ocean-Blue, #2ec3e2);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 24px;
 }
-.footer__subheader{
-	font-size: 20px;
-	font-weight: 400;
+.footer__subheader {
+  font-size: 20px;
+  font-weight: 400;
 }
 .footer__subheader {
   white-space: pre-line; /* Позволяет сохранить переносы строк */
@@ -55,12 +53,47 @@ footer{
   margin-top: 12px; /* Устанавливает верхний отступ после каждого <br> */
 }
 
-.footer__subheader_item{
-	margin-bottom: 12px;
+.footer__subheader_item {
+  margin-bottom: 12px;
 }
-
-
-
-
-
-
+@media only screen and (max-width: 425px) {
+  footer {
+    flex-direction: column;
+    padding: 24px 16px 40px 16px;
+  }
+  .footer__item {
+    flex-direction: column;
+    align-items: start;
+		margin-bottom: 24px;
+  }
+  .footer__item_social {
+    display: flex;
+		flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer__img {
+    width: 99px;
+    height: 47px;
+  }
+  .footer__copyrite {
+    display: none;
+  }
+  .footer__social {
+    margin: 0;
+  }
+  .footer__social_icon {
+    width: 28px;
+    height: 28px;
+  }
+  .footer__item_news {
+    font-size: 20px;
+  }
+  #footer__input_email  {
+    width: 100%;
+  }
+	.footer__heading, .footer__subheader{
+		font-size: 16px;
+		margin-bottom: 12px;
+	}
+}

@@ -121,6 +121,7 @@ a {
   }
   .contact__descr div {
     display: inline; /* Элементы будут отображаться строчно */
+		color: var(--dark-70-for-body-text, #35373F);
   }
   .contact__icons {
     gap: 16px;

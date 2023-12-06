@@ -9,29 +9,29 @@ import { Link } from "react-router-dom"; // Импорт Link из react-router-
 function Footer() {
   return (
     <footer>
-      <div className="footer__item">
+      <div className="footer__item footer__item_social">
         <div className="footer__logo">
           <Link to="/">
-            <img src={logo} alt="footer logo" />
+            <img src={logo} alt="footer logo" className="footer__img" />
           </Link>
         </div>
         <div className="footer__social">
           <div className="footer__social_icon">
-            <img src={fb} alt="facebook" />
+            <img src={fb} alt="facebook" className="footer__social_icon"/>
           </div>
 
-          <div className="footer__social_icon">
-            <img src={inst} alt="instagram" />
+          <div >
+            <img src={inst} alt="instagram" className="footer__social_icon"/>
           </div>
 
-          <div className="footer__social_icon">
-            <img src={linkedin} alt="linkedin" />
+          <div >
+            <img src={linkedin} alt="linkedin" className="footer__social_icon"/>
           </div>
         </div>
-        <div className="footer__copyrite">Copyright 2018 CloudBudget</div>
+        <div className="footer__copyrite">Copyright 2023. All rights reserved</div>
       </div>
-      <div className="footer__item">
-        <h4>Get our newsletter</h4>
+      <div className="footer__item footer__item_newsletter">
+        <h4 className="footer__item_news">Get our newsletter</h4>
         <div className="footer__input">
           <input
             required
@@ -39,6 +39,7 @@ function Footer() {
             type="text"
             id="footer__input_email"
             placeholder="Your email address"
+						className="p2"
           />
           {/* <svg
             width="40"

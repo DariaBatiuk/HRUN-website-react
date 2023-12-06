@@ -45,6 +45,7 @@
   }
 	.service__offers{
 		margin-top: 24px;
+		width: 100%;
 	}
 	.service__list{
 		align-items: center;
