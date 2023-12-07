@@ -28,15 +28,15 @@ function ServiceSection() {
 
           <ul className="service__offers">
             <Link className="h2 service__list" to="/services">
-              Small Businesses
+						Basic Package
               <img src={arrow} alt="arrow" className="arrow" />
             </Link>
             <Link className="h2 service__list" to="/services">
-              Medium Businesses
+						Standard Package
               <img src={arrow} alt="arrow" className="arrow" />
             </Link>
             <Link className="h2 service__list" to="/services">
-              Large Businesses
+						Premium Package
               <img src={arrow} alt="arrow" className="arrow" />
             </Link>
           </ul>

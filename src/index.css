@@ -70,13 +70,17 @@ h4 {
   }
   .h2 {
     font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
     line-height: 45px;
   }
-	h4{
-		font-size: 16px;
-	}
+  .h3 {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+  }
+  h4 {
+    font-size: 16px;
+  }
   .p2 {
     font-size: 16px;
     font-style: normal;
