@@ -2,6 +2,8 @@ import React from "react";
 import "./index.css";
 import PropTypes from "prop-types"; // Добавлен импорт PropTypes
 import arrow from "../../icons/arrow-small.svg";
+import PrimaryBtn from '../../сomponents/primaryBtn/PrimaryBtn';
+
 
 // Компонент для заголовка раздела
 const SectionHeader = ({ title }) => (
@@ -74,6 +76,7 @@ const About = () => (
         <span className="about__name">Bill Gates</span>
       </div>
     </div>
+		<PrimaryBtn className="mobile-only-btn" />
 
     <div className="about__values">
       <div className="h1">VALUES AND VISION</div>
@@ -111,7 +114,7 @@ const About = () => (
         {/* Предполагается, что данные членов команды будут переданы здесь */}
         <TeamMember name="Valerii Kryshtal" position="CEO" />
         <TeamMember name="Paul Savage" position="Co-Founder" />
-        <TeamMember name="Dasha Batyuk" position="Frontend Developer" />
+        <TeamMember name="Daria Batiuk" position="Frontend Developer" />
 				<TeamMember name="Kateryna Kovalenko" position="UX/UI Designer" />
         {/* Добавьте дополнительных членов команды здесь */}
       </div>
