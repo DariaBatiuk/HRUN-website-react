@@ -3,6 +3,10 @@ import "./index.css";
 import PropTypes from "prop-types"; // Добавлен импорт PropTypes
 import arrow from "../../icons/arrow-small.svg";
 import PrimaryBtn from '../../сomponents/primaryBtn/PrimaryBtn';
+import Valerii from '../../img/Valerii.jpg';
+import Paul from '../../img/Paul.jpg';
+import Daria from '../../img/Daria.jpg';
+import KAte from '../../img/Kate.png';
 
 
 // Компонент для заголовка раздела
@@ -44,12 +48,12 @@ ValueBlock.propTypes = {
 };
 
 // Компонент для отдельного члена команды
-const TeamMember = ({ name, position }) => (
+const TeamMember = ({ name, position, imageSrc }) => (
   <div className="teamMember">
     {/* Исправлено: использование тега img для изображения */}
-    <img src="#" alt={name} className="team__img" />
+    <img src={imageSrc} alt="" className="team__img" />
     <h3 className="h3">{name}</h3>
-    <p className="p1">{position}</p>
+    <p className="p1 teamMember_position">{position}</p>
   </div>
 );
 
@@ -112,10 +116,10 @@ const About = () => (
 
       <div className="team__section">
         {/* Предполагается, что данные членов команды будут переданы здесь */}
-        <TeamMember name="Valerii Kryshtal" position="CEO" />
-        <TeamMember name="Paul Savage" position="Co-Founder" />
-        <TeamMember name="Daria Batiuk" position="Frontend Developer" />
-				<TeamMember name="Kateryna Kovalenko" position="UX/UI Designer" />
+        <TeamMember name="Valerii Kryshtal" position="CEO" imageSrc={Valerii}/>
+        <TeamMember name="Paul Savage" position="Co-Founder" imageSrc={Paul} />
+        <TeamMember name="Daria Batiuk" position="Frontend Developer" imageSrc={Daria}/>
+				<TeamMember name="Kate Kovalenko" position="UX/UI Designer" imageSrc={KAte}/>
         {/* Добавьте дополнительных членов команды здесь */}
       </div>
     </div>

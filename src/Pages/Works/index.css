@@ -6,7 +6,7 @@
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-	margin-bottom: 160px;
+  margin-bottom: 160px;
 }
 .project__subheader {
   color: var(--Main-blue, #182963);
@@ -21,4 +21,26 @@
   background-position: center;
   /* Другие стили, если необходимо */
 }
-
+@media only screen and (max-width: 425px) {
+  .work__header {
+    margin-top: 0;
+  }
+  .project__section {
+    flex-direction: column;
+    gap: 34px;
+		margin-bottom: 60px;
+  }
+  .project__image {
+    width: 100%;
+    height: 240px;
+    margin: 0 auto;
+    margin-bottom: 24px;
+  }
+  .project__subheader {
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+		margin-top: 0;
+  }
+}
