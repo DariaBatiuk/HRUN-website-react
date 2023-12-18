@@ -92,6 +92,7 @@ article {
 	}
 	.serviceItem__descr{
 		width: 50%;
+		font-size: 19px;
 	}
 	.table__header{
 		margin-top: 120px;

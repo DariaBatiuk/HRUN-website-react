@@ -1,12 +1,16 @@
-import React from "react";
+import React from 'react';
 import "./index.css";
 import logo from "../../icons/Logo.png";
 import fb from "../../icons/social/facebook.svg";
-import inst from "../../icons/social/Group (1).svg";
-import linkedin from "../../icons/social/Group (2).svg";
+import fb_hover from "../../icons/social/facebook_hover.svg";
+import inst from "../../icons/social/inst.svg";
+import inst_hoevr from "../../icons/social/inst_hover.svg";
+import linkedin from "../../icons/social/linkedin.svg";
+import linkedin_hover from "../../icons/social/linkedin_hover.svg";
 import { Link } from "react-router-dom"; // Импорт Link из react-router-dom
 
 function Footer() {
+	
   return (
     <footer>
       <div className="footer__item footer__item_social">
@@ -16,16 +20,19 @@ function Footer() {
           </Link>
         </div>
         <div className="footer__social">
-          <div className="footer__social_icon">
-            <img src={fb} alt="facebook" className="footer__social_icon"/>
+          <div className='footer__social_icons'>
+            <img src={fb} alt="facebook" className="footer__social_icon" id="footer__social_icon"/>
+						<img src={fb_hover} alt="facebook" className="footer__social_icon_hover" />
           </div>
 
-          <div >
+          <div className='footer__social_icons'>
             <img src={inst} alt="instagram" className="footer__social_icon"/>
+						<img src={inst_hoevr} alt="facebook" className="footer__social_icon_hover" />
           </div>
 
-          <div >
+          <div className='footer__social_icons'>
             <img src={linkedin} alt="linkedin" className="footer__social_icon"/>
+						<img src={linkedin_hover} alt="facebook" className="footer__social_icon_hover" />
           </div>
         </div>
         <div className="footer__copyrite">Copyright 2023. All rights reserved</div>
@@ -41,24 +48,6 @@ function Footer() {
             placeholder="Your email address"
 						className="p2"
           />
-          {/* <svg
-            width="40"
-            height="41"
-            viewBox="0 0 40 41"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g id="icon/arrow-top-right">
-              <path
-                id="Vector"
-                d="M31.6666 29.2502V8.8335M31.6666 8.8335H11.25M31.6666 8.8335L8.33331 32.1668"
-                stroke="#182963"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </g>
-          </svg> */}
 
           <label htmlFor="footer__input_email"></label>
         </div>
@@ -66,10 +55,10 @@ function Footer() {
       <div className="footer__item">
         <div className="footer__heading">Company</div>
         <div className="footer__subheader">
-          <div className="footer__subheader_item">Services</div>
-          <div className="footer__subheader_item">About us</div>
-          <div className="footer__subheader_item">Our work</div>
-          <div className="footer__subheader_item">Blog</div>
+          <Link to="/services" className="footer__subheader_item">Services</Link>
+          <Link to="/about" className="footer__subheader_item">About us</Link>
+          <Link to="/work" className="footer__subheader_item">Our work</Link>
+          <Link className="footer__subheader_item">Blog</Link>
         </div>
       </div>
       <div className="footer__item">

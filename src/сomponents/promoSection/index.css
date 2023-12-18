@@ -7,7 +7,6 @@
 .promo__wrapper {
   display: flex;
   width: 1155px;
-  /* // height: 380px; */
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
@@ -43,78 +42,12 @@ span {
 }
 
 @media only screen and (max-width: 425px) {
-  .promo__menu {
-    position: relative;
-  }
-  .promo__wrapper {
-    width: 100%;
-  }
-
-  .promo__list {
-    list-style-type: none;
-    display: none !important;
-    flex-direction: column;
-    width: 100%;
-    position: fixed;
-    top: 150px;
-    margin: 0 auto;
-    right: 0;
-    background-color: white;
-    /* border-top: 1px solid #ccc; */
-    z-index: 10;
-    list-style-type: none;
-    max-height: 0;
-    /* overflow: hidden; */
-    transition: max-height 0.3s ease-in-out;
-  }
-  /* Стили для открытого состояния списка */
-  .promo__list.open {
-    display: flex !important;
-    max-height: calc(
-      100vh - 50px
-    ); /* Высота на всю высоту экрана за вычетом высоты гамбургер-меню */
-  }
-
-  .promo__link {
-    padding: 10px;
-    display: block;
-    color: black;
-    text-align: center;
-    line-height: 140%;
-    font-size: 16px;
-  }
-  .promo__link::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    /* bottom: -5px; */
-    transform: translateX(-50%);
-    width: 136px;
-    height: 1px;
-    background-color: #c5e6ea;
-    /* border-bottom: 1px solid;*/
-  }
-
-  .promo__link-text {
-    font-size: 16px;
-  }
-  /* Стили для изменения цвета при наведении */
-  .promo__link-text:hover {
-    color: var(--Primary-color, #12a6c8);
-    font-size: 20px;
-  }
-
-  /* Стили для изменения цвета при активации (клике) */
-  .promo__link-text:active {
-    color: var(--Primary-color, #12a6c8);
-    font-size: 20px;
-  }
-
   .hamburger {
     display: block; /* Показать иконку гамбургера */
     cursor: pointer;
-    position: absolute; /* Расположить иконку гамбургера внутри .promo__menu */
-    top: 0; /* Расположить в верхнем углу */
+     /* Расположить иконку гамбургера внутри .promo__menu */
+		 /* position: absolute; */
+    top: 6%; /* Расположить в верхнем углу */
     right: 0; /* Прижать к правому краю */
   }
 
@@ -141,7 +74,7 @@ span {
     margin-left: 40px !important; /* Отступ для третьей строки после <br> */
   }
   .promo__descr {
-    margin-left: 20% ;
+    margin-left: 20%;
     font-size: 16px;
     line-height: 24px;
     width: 210px;
@@ -150,8 +83,11 @@ span {
   .promo__btn {
     display: block;
     margin: 0 auto;
-		margin-bottom: 60px;
+    margin-bottom: 60px;
     width: 288px;
     text-align: center;
+  }
+	.promo__wrapper {
+    width: 100%;
   }
 }

@@ -7,7 +7,7 @@ function Service() {
   return (
     <div>
       <Table />
-      <PrimaryBtn className="mobile-only-btn" />
+      {/* <PrimaryBtn className="mobile-only-btn_service" /> */}
     </div>
   );
 }

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../../responsive.css";
 import "./index.css";
 import { Link, useLocation } from "react-router-dom"; // Импортируем useLocation
-
+// import arrow from '../../icons/arrow-top-right_mobile.svg'
 function NavMenu() {
   const location = useLocation(); // Получаем текущий маршрут
   const [sliderValue, setSliderValue] = useState(1); // Состояние для значения слайдера
@@ -68,7 +68,9 @@ function NavMenu() {
   };
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+	const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
   // Обновляем положение слайдера при изменении маршрута
   useEffect(() => {
     setSliderValue(updateSliderPosition(location.pathname));
@@ -85,23 +87,83 @@ function NavMenu() {
 
       <ul className={`promo__list ${isMenuOpen ? "open" : ""}`}>
         <li>
-          <Link to="/" className="promo__link ">
+          <Link to="/" className="promo__link" onClick={closeMenu}>
             <span className="promo__link-text p1">Home</span>
+						<img
+              src={`data:image/svg+xml;utf8,${encodeURIComponent(
+                '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none"><path d="M23.75 21.5625V6.25M23.75 6.25H8.4375M23.75 6.25L6.25 23.75" stroke="#8E93A2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+              )}`}
+              alt=""
+              className="promo__link-img"
+            />
+            {/* SVG для ховера (скрыта по умолчанию) */}
+            <img
+              src={`data:image/svg+xml;utf8,${encodeURIComponent(
+                '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none"><path d="M23.75 21.5625V6.25M23.75 6.25H8.4375M23.75 6.25L6.25 23.75" stroke="#12A6C8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+              )}`}
+              alt=""
+              className="promo__link-img-hover"
+            />
           </Link>
         </li>
         <li>
-          <Link to="/services" className="promo__link p1">
+          <Link to="/services" className="promo__link p1" onClick={closeMenu}>
             <span className="promo__link-text p1">Services</span>
+            <img
+              src={`data:image/svg+xml;utf8,${encodeURIComponent(
+                '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none"><path d="M23.75 21.5625V6.25M23.75 6.25H8.4375M23.75 6.25L6.25 23.75" stroke="#8E93A2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+              )}`}
+              alt=""
+              className="promo__link-img"
+            />
+            {/* SVG для ховера (скрыта по умолчанию) */}
+            <img
+              src={`data:image/svg+xml;utf8,${encodeURIComponent(
+                '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none"><path d="M23.75 21.5625V6.25M23.75 6.25H8.4375M23.75 6.25L6.25 23.75" stroke="#12A6C8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+              )}`}
+              alt=""
+              className="promo__link-img-hover"
+            />
           </Link>
         </li>
         <li>
-          <Link to="/about" className="p1 promo__link">
+          <Link to="/about" className="p1 promo__link" onClick={closeMenu}>
             <span className="promo__link-text p1">About us</span>
+						<img
+              src={`data:image/svg+xml;utf8,${encodeURIComponent(
+                '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none"><path d="M23.75 21.5625V6.25M23.75 6.25H8.4375M23.75 6.25L6.25 23.75" stroke="#8E93A2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+              )}`}
+              alt=""
+              className="promo__link-img"
+            />
+            {/* SVG для ховера (скрыта по умолчанию) */}
+            <img
+              src={`data:image/svg+xml;utf8,${encodeURIComponent(
+                '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none"><path d="M23.75 21.5625V6.25M23.75 6.25H8.4375M23.75 6.25L6.25 23.75" stroke="#12A6C8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+              )}`}
+              alt=""
+              className="promo__link-img-hover"
+            />
           </Link>
         </li>
         <li>
-          <Link to="/work" className="p1 promo__link">
+          <Link to="/work" className="p1 promo__link" onClick={closeMenu}>
             <span className="promo__link-text p1">Our work</span>
+						<img
+              src={`data:image/svg+xml;utf8,${encodeURIComponent(
+                '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none"><path d="M23.75 21.5625V6.25M23.75 6.25H8.4375M23.75 6.25L6.25 23.75" stroke="#8E93A2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+              )}`}
+              alt=""
+              className="promo__link-img"
+            />
+            {/* SVG для ховера (скрыта по умолчанию) */}
+            <img
+              src={`data:image/svg+xml;utf8,${encodeURIComponent(
+                '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none"><path d="M23.75 21.5625V6.25M23.75 6.25H8.4375M23.75 6.25L6.25 23.75" stroke="#12A6C8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+              )}`}
+              alt=""
+              className="promo__link-img-hover"
+            />
           </Link>
         </li>
       </ul>
