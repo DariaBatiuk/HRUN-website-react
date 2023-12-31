@@ -1,15 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './index.css';
 
-function PrimaryBtn({ className }) {
-  // Прямое использование переданного класса без внутренней логики
+function PrimaryBtn({ className, onClick }) {
   const buttonClassName = `btn ${className || ''}`;
 
   return (
-    <a href="#contact" className={buttonClassName}>
+    <div className={buttonClassName} onClick={onClick}>
       Contact us
-    </a>
+    </div>
   );
 }
 
 export default PrimaryBtn;
+
