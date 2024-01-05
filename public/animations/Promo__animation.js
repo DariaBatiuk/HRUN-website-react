@@ -1,5 +1,11 @@
 import React, { useRef, useEffect } from 'react';
 import * as THREE from 'three';
+// import img1 from "../animations/PromoPage__animation/Vector 18 (1).png";
+// import img2 from "../animations/PromoPage__animation/Vector 18 (2).png";
+// import img3 from "../animations/PromoPage__animation/Vector 18 (3).png";
+// import img4 from "../animations/PromoPage__animation/Vector 18 (4).png";
+// import img5 from "../animations/PromoPage__animation/Vector 18 (5).png";
+
 
 const Promo__animation = () => {
   const mountRef = useRef(null);
@@ -16,7 +22,7 @@ const Promo__animation = () => {
     // Загрузка текстур
     const loader = new THREE.TextureLoader();
     for (let i = 1; i <= frameCount; i++) {
-      loader.load(`../animations/PromoPage__animation/Vector 18 (${i}).png`, (texture) => {
+      loader.load(`./PromoPage__animation/Vector 18 (${i}).png`, (texture) => {
         textures.push(texture);
         if (textures.length === frameCount) {
           // Все текстуры загружены, начинаем анимацию

@@ -1,7 +1,7 @@
 import React from 'react';
 import "./index.css";
 import PrimaryBtn from "../primaryBtn/PrimaryBtn";
-import Promo__animation from '../../animations/Promo__animation';
+import Promo__animation from '../../../public/animations/Promo__animation';
 
 function PromoSection() {
   return (
