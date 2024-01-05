@@ -1,6 +1,7 @@
 import React from 'react';
 import "./index.css";
 import PrimaryBtn from "../primaryBtn/PrimaryBtn";
+import Promo__animation from '../../animations/Promo__animation';
 
 function PromoSection() {
   return (
@@ -14,6 +15,9 @@ function PromoSection() {
         <p className="promo__descr p1">
 				More profit, less worry. We can help you to provide comprehensive branding services including brand identity development.
         </p>
+				<div className='promo__animation'>
+					<Promo__animation />
+				</div>
       </div>
       <PrimaryBtn className="promo__btn" />
     </div>
