@@ -1,7 +1,7 @@
 import React from 'react';
 import "./index.css";
 import PrimaryBtn from "../primaryBtn/PrimaryBtn";
-import Promo__animation from '../../../public/animations/Promo__animation';
+import PromoAnimation from '../../animations/PromoAnimation';
 
 function PromoSection() {
   return (
@@ -16,7 +16,7 @@ function PromoSection() {
 				More profit, less worry. We can help you to provide comprehensive branding services including brand identity development.
         </p>
 				<div className='promo__animation'>
-					<Promo__animation />
+					<PromoAnimation />
 				</div>
       </div>
       <PrimaryBtn className="promo__btn" />
