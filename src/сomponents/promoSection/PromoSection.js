@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./index.css";
 import PrimaryBtn from "../primaryBtn/PrimaryBtn";
-import PromoAnimation from '../../animations/PromoAnimation';
+import ContactWindow from '../contactWindow/ContactWindow';
+
 
 function PromoSection() {
+	const [isContactWindowVisible, setContactWindowVisibility] = useState(false);
+
+	const handleContactBtnClick = () => {
+    setContactWindowVisibility(true);
+  };
+
+  const handleContactWindowClose = () => {
+    setContactWindowVisibility(false);
+  };
+
   return (
     <div className="promo">
       <div className="promo__wrapper">
@@ -16,10 +27,10 @@ function PromoSection() {
 				More profit, less worry. We can help you to provide comprehensive branding services including brand identity development.
         </p>
 				<div className='promo__animation'>
-					<PromoAnimation />
 				</div>
       </div>
-      <PrimaryBtn className="promo__btn" />
+      <PrimaryBtn className="promo__btn" onClick={handleContactBtnClick} />
+			{isContactWindowVisible && <ContactWindow onClose={handleContactWindowClose} />}
     </div>
   );
 }

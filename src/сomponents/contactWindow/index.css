@@ -5,6 +5,7 @@
 .contact__container{
 	position: absolute;
 	top: 170px;
+	left: 7%;
 	height: 554px;
 	/* width: 1079px; */
 	margin: 0 auto;
@@ -26,4 +27,19 @@
   height: 100%;
   background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный белый цвет */
   z-index: 999; /* Значение z-index должно быть больше, чем у ContactWindow, чтобы она была поверх оверлея */
+}
+@media only screen and (max-width: 425px) {
+	.contact__container{
+		top: 10px;
+		left: 0;
+		height: auto;
+		padding: 5px 20px 10px 20px;
+	}
+	.contact__window{
+		flex-direction: column;
+	}
+	.contact__overlay{
+		position: absolute;
+    left: 0;
+	}
 }
