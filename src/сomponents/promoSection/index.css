@@ -3,6 +3,7 @@
   /* // position: relative; */
   background: #fefeff no-repeat 50% / cover;
   padding: 0;
+
 }
 .promo__wrapper {
   display: flex;
@@ -64,27 +65,34 @@ span {
     display: none; /* Скрыть слайдер на мобильных устройствах */
   }
   .promo__title {
+		text-align: center;
     font-size: 28px;
     line-height: 106%;
   }
   h1 span:nth-child(1)::before {
-    margin-left: 52px !important; /* Отступ для второй строки после <br> */
+		/* Отступ для второй строки после <br> */
+    margin-left: 0 !important; 
   }
   h1 span:nth-child(3)::before {
-    margin-left: 40px !important; /* Отступ для третьей строки после <br> */
+    margin-left: 0 !important; /* Отступ для третьей строки после <br> */
   }
+	.promo__header{
+		top: -183px !important; 
+	}
   .promo__descr {
     margin-left: 20%;
     font-size: 16px;
     line-height: 24px;
     width: 210px;
     margin-bottom: 40px;
+		position: absolute;
+    top: 360px;
   }
   .promo__btn {
     display: block;
     margin: 0 auto;
     margin-bottom: 60px;
-    width: 288px;
+    width: 273px;
     text-align: center;
   }
 	.promo__wrapper {

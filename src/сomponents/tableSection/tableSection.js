@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import smallBusinessData from "./smallBusinessData/smallBusinessData";
 import mediumBusinessData from "./mediumBusinessData/mediumBusinessData";
 import largeBusinessData from "./largeBusinessServices/largeBusinessData";
+import img__service1_mobile from '../../img/Service__page_img/Img__service1_mobile.png';
+
 import "./index.css";
 
 const ServiceItem = ({ title, description }) => (
@@ -55,6 +57,7 @@ const BusinessSection = ({ title, subtitle, data }) => (
   <>
     <header className="header">
       <h2 className="h1 table__header">{title}</h2>
+			<img src={img__service1_mobile} alt={img__service1_mobile} className="img__service1_mobile" />
     </header>
 		<div className="table__subheader">
 		{subtitle}

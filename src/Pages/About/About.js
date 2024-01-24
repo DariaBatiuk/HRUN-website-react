@@ -7,6 +7,14 @@ import Valerii from '../../img/Valerii.jpg';
 import Paul from '../../img/Paul.jpg';
 import Daria from '../../img/Daria.jpg';
 import KAte from '../../img/Kate.png';
+import img__about1 from '../../img/about__page_img/img__about1.png';
+import img__about1_mobile from '../../img/about__page_img/img__about1_mobile.png';
+import img__about2 from '../../img/about__page_img/img__about2.png';
+import img__about2_mobile from '../../img/about__page_img/img__about2_mobile.png';
+import img__about3 from '../../img/about__page_img/img__about3.png';
+import img__about3_mobile from '../../img/about__page_img/img__about3_mobile.png';
+import img__about4 from '../../img/about__page_img/img__about4.png';
+import img__about4_mobile from '../../img/about__page_img/img__about4_mobile.png';
 
 
 // Компонент для заголовка раздела
@@ -24,18 +32,20 @@ const SectionHeader = ({ title }) => (
         )
       )}
     </h1>
+		<img src={img__about1_mobile} alt={img__about1_mobile} className="img__about1_mobile" />
+
   </div>
 );
 
 // Компонент для блока ценностей компании
 const ValueBlock = ({ title, description, img, animation }) => (
-  <div className="valueBlock" style={{ animation: animation }}>
+  <div className="valueBlock" >
     <div className="value__title__wrapper">
       <h3 className="h3 value__title">{title}</h3>
       <img src={img} alt={title} className="valueImage" />
     </div>
     <p className="p1">{description}</p>
-    <div>Animation</div>
+		<img src={animation} className="about__value_img"/>
   </div>
 );
 
@@ -89,20 +99,20 @@ const About = () => (
         <ValueBlock
           title="Quality"
           description="We deliver high-quality digital solutions, websites, and apps that meet industry standards and provide value to clients."
-          img={arrow} // Здесь предполагается использование изображения стрелки
-          animation="bounce 2s infinite" // Пример CSS анимации
+          img={arrow}// Здесь предполагается использование изображения стрелки
+          animation= {img__about2_mobile} // Пример CSS анимации
         />
         <ValueBlock
           title="Efficiency"
           description="We deeply engage with our clients' business objectives, providing solutions that yield optimal results."
           img={arrow} // Здесь предполагается использование изображения стрелки
-          animation="bounce 2s infinite" // Пример CSS анимации
+          animation= {img__about3_mobile}// Пример CSS анимации
         />
         <ValueBlock
           title="Innovation"
           description="We promote continuous innovation, empowering employees to explore new ideas and technologies to meet client needs."
           img={arrow} // Здесь предполагается использование изображения стрелки
-          animation="bounce 2s infinite" // Пример CSS анимации
+          animation= {img__about4_mobile}// Пример CSS анимации
         />
       </div>
     </div>

@@ -73,10 +73,19 @@
   display: none;
 }
 @media only screen and (max-width: 425px) {
+	.sectionHeader{
+		position: relative;
+		margin-top: 73px;
+	}
   .about__header {
     transform: none;
   }
+	.img__about1_mobile{
+		position: absolute;
+    top: -45%;
+	}
   .about__descr {
+		margin-top: 145px;
     transform: none;
     width: 100%;
     padding: 0 0 0 5px;
@@ -88,24 +97,37 @@
   .mobile-only-btn {
     display: block;
     margin: 40px auto -10px auto;
-    width: 288px;
+    width: 287px;
     text-align: center;
   }
+	.about__values{
+		margin-top: 96px;
+	}
+	.about__value_img{
+		margin-top: 20px;
+	}
   .values__wrapper {
     margin-top: 16px;
     flex-direction: column;
   }
+	.valueBlock{
+		padding: 4px 20px;
+	}
   .team__descr {
     margin-top: 0;
     width: 100%;
-    font-size: 16px;
+    font-size: 15px;
     font-style: normal;
     font-weight: 400;
     line-height: 22px;
   }
   .about__team {
-    margin-bottom: 60px;
+		margin-top: 60px;
+    /* margin-bottom: 60px; */
   }
+	.team__section{
+		margin-top: 24px;
+	}
   .team__img {
     margin-bottom: 12px;
     width: 136px;

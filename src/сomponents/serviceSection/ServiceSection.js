@@ -2,13 +2,13 @@ import React from "react";
 import "./index.css";
 import arrow from "../../icons/arrow-top-right.svg";
 import { Link } from "react-router-dom";
+import img3_mobile from '../../img/promo__page_img/Img3_mobile.png';
 
 function ServiceSection() {
   return (
     <section className="serviceSection">
       <div className="h1">OUR SERVICES</div>
       <div className="service__wrapper">
-        Image
         <div className="service__descr">
           <p className="p1">
             At our company, we cater to businesses of all sizes,
@@ -41,6 +41,7 @@ function ServiceSection() {
             </Link>
           </ul>
         </div>
+				<img src={img3_mobile} alt={img3_mobile} className="img3_mobile" />
       </div>
     </section>
   );
