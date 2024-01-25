@@ -127,6 +127,7 @@
   }
 	.team__section{
 		margin-top: 24px;
+		justify-content: center;
 	}
   .team__img {
     margin-bottom: 12px;

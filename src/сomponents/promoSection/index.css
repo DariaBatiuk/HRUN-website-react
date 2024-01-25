@@ -6,11 +6,16 @@
 
 }
 .promo__wrapper {
+	position: relative;
   display: flex;
   width: 1155px;
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
+}
+.promo__header{
+	position: absolute;
+	top: 15%;
 }
 h1 span:nth-child(1)::before {
   content: "\00a0"; /* Неразрывный пробел */
@@ -77,7 +82,7 @@ span {
     margin-left: 0 !important; /* Отступ для третьей строки после <br> */
   }
 	.promo__header{
-		top: -183px !important; 
+		top: 83px !important; 
 	}
   .promo__descr {
     margin-left: 20%;
@@ -85,8 +90,8 @@ span {
     line-height: 24px;
     width: 210px;
     margin-bottom: 40px;
-		position: absolute;
-    top: 360px;
+		/* position: absolute;
+    top: 360px; */
   }
   .promo__btn {
     display: block;

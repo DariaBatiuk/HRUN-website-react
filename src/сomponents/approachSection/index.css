@@ -1,10 +1,19 @@
+.approach{
+	display: flex;
+}
 .approach__wrapper {
   width: 50%;
 }
 .approach__title {
   margin-bottom: 45px;
 }
+.img2{
+	margin-top: -5%;
+}
 @media only screen and (max-width: 425px) {
+	.approach{
+		flex-direction: column;
+	}
 	.approach__wrapper{
 		width: 100%;
 		position: relative;
@@ -15,8 +24,5 @@
     line-height: normal;
 		margin-bottom: 24px;
   }
-	.img2_mobile{
-		position: absolute;
-    top: 85%;
-	}
+	
 }

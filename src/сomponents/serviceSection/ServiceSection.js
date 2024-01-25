@@ -1,14 +1,29 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./index.css";
 import arrow from "../../icons/arrow-top-right.svg";
 import { Link } from "react-router-dom";
+import img3 from '../../img/promo__page_img/Img3.png';
 import img3_mobile from '../../img/promo__page_img/Img3_mobile.png';
 
 function ServiceSection() {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const imageSource = windowWidth >= 768 ? img3 : img3_mobile; // предполагаем, что 768px - это пороговое значение для мобильных устройств
+
   return (
     <section className="serviceSection">
       <div className="h1">OUR SERVICES</div>
       <div className="service__wrapper">
+			<img src={imageSource} alt="Service" className="img3" />
         <div className="service__descr">
           <p className="p1">
             At our company, we cater to businesses of all sizes,
@@ -41,10 +56,10 @@ function ServiceSection() {
             </Link>
           </ul>
         </div>
-				<img src={img3_mobile} alt={img3_mobile} className="img3_mobile" />
       </div>
     </section>
   );
 }
 
 export default ServiceSection;
+
