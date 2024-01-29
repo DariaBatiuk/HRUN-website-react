@@ -4,16 +4,18 @@ article {
   margin-bottom: 24px;
 }
 
+.service__header{
+	position: relative;
+}
 .table__header {
-  margin: 0 auto;
   margin-top: 160px;
-  max-width: 860px;
+  /* max-width: 860px; */
   text-align: center;
 }
 .table__subheader {
-  margin-top: 8px;
+  /* margin-top: -115px; */
   margin-bottom: 32px;
-  font-size: 82px;
+  font-size: 80px;
   font-style: normal;
   font-weight: 700;
   line-height: 106px;
@@ -42,8 +44,8 @@ article {
   text-align: start;
 }
 .serviceImage {
-  width: 40px;
-  height: 40px;
+	position: absolute;
+    top: -120%;
 }
 .servicesWrapper {
   display: flex;
@@ -77,8 +79,7 @@ article {
 		margin-right: 0;
 	}
 	.serviceImage{
-		width: 30px;
-		height: 30px;
+		max-width: 261px;
 	}
 	.servicesWrapper {
 		margin-top: 26px;

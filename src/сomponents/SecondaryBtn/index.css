@@ -9,12 +9,14 @@
   gap: 10px;
   border-radius: 200px;
   border: 1px solid var(--Gradient-for-logo, #084378);
+	background: white;
   color: var(--Primary-color, #12a6c8);
   font-size: 20px;
   font-weight: 400;
   line-height: 26px; 
 	cursor: pointer;
 }
+
 .btn_secondary:hover {
   border: 1px solid var(--Gradient-for-logo, #084378);
   background: var(--light-blue-footer, #edf8fe);

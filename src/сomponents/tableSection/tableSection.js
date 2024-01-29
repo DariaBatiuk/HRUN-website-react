@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import smallBusinessData from "./smallBusinessData/smallBusinessData";
 import mediumBusinessData from "./mediumBusinessData/mediumBusinessData";
 import largeBusinessData from "./largeBusinessServices/largeBusinessData";
+import img__service1 from '../../img/Service__page_img/Img_service1.png';
 import img__service1_mobile from '../../img/Service__page_img/Img__service1_mobile.png';
-
 import "./index.css";
 
 const ServiceItem = ({ title, description }) => (
@@ -22,14 +22,10 @@ ServiceItem.propTypes = {
 const CategoryRow = ({ category, services, img }) => (
   <article className="categoryRow">
     <div className="categoryHeader">
-      {" "}
-      {/* Обертка для заголовка категории и изображения */}
       <div className="h3 category">{category}</div>
       <img src={img} alt={category} className="serviceImage" />
     </div>
     <div className="servicesWrapper">
-      {" "}
-      {/* Обертка для всех ServiceItem */}
       {services.map((service, index) => (
         <ServiceItem
           key={index}
@@ -52,25 +48,37 @@ CategoryRow.propTypes = {
   img: PropTypes.string.isRequired,
 };
 
-// Компонент для рендеринга заголовка и таблицы данных
-const BusinessSection = ({ title, subtitle, data }) => (
-  <>
-    <header className="header">
-      <h2 className="h1 table__header">{title}</h2>
-			<img src={img__service1_mobile} alt={img__service1_mobile} className="img__service1_mobile" />
-    </header>
-		<div className="table__subheader">
-		{subtitle}
-		</div>
+const BusinessSection = ({ title, subtitle, data }) => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-    {data.map((table, index) => (
-      <CategoryRow key={index} {...table} />
-    ))}
-  </>
-);
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const imageSource = windowWidth >= 425 ? img__service1 : img__service1_mobile; 
+
+  return (
+    <>
+      <header className="service__header">
+        <h2 className="h1 table__header">{title}</h2>
+        <img src={imageSource} alt="Service" className="serviceImage" />
+      </header>
+      <div className="table__subheader">{subtitle}</div>
+      {data.map((table, index) => (
+        <CategoryRow key={index} {...table} />
+      ))}
+    </>
+  );
+};
 
 BusinessSection.propTypes = {
   title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string,
   data: PropTypes.arrayOf(
     PropTypes.shape({
       category: PropTypes.string.isRequired,
@@ -80,23 +88,22 @@ BusinessSection.propTypes = {
   ).isRequired,
 };
 
-// Основной компонент Table, который рендерит разделы для small и medium бизнеса
 function Table() {
   return (
     <section className="service">
       <BusinessSection
         title="BASIC PACKAGE"
-				subtitle="Fundamentals for your Business"
+        subtitle="Fundamentals for your Business"
         data={smallBusinessData}
       />
       <BusinessSection
-        title="STANDART PACKAGE"
-				subtitle="Enhanced capabilities for growth"
+        title="STANDARD PACKAGE"
+        subtitle="Enhanced capabilities for growth"
         data={mediumBusinessData}
       />
       <BusinessSection
         title="PREMIUM PACKAGE"
-				subtitle="Full immersion into the world of innovation"
+        subtitle="Full immersion into the world of innovation"
         data={largeBusinessData}
       />
     </section>
@@ -104,3 +111,4 @@ function Table() {
 }
 
 export default Table;
+

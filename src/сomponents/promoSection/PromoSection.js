@@ -4,6 +4,7 @@ import PrimaryBtn from "../primaryBtn/PrimaryBtn";
 import ContactWindow from '../contactWindow/ContactWindow';
 import img1_mobile from '../../img/promo__page_img/Group_mobile.png';
 import img1 from '../../img/promo__page_img/Group.png';
+import animation__promo from '../../img/animation__promo.gif';
 
 function PromoSection() {
   const [isContactWindowVisible, setContactWindowVisibility] = useState(false);
