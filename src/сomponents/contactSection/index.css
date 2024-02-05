@@ -65,7 +65,10 @@ textarea:focus {
   border: 1px solid var(--Primary-color, #12A6C8);
   background: var(--light-blue-footer, #EDF8FE); /* Укажите значение по умолчанию или убедитесь, что переменная определена */
 }
-
+.filled {
+  border: 1px solid var(--Gradient-for-logo, #084378);
+  background: var(--white-blue-input, #F8FBFF);
+}
 label {
   position: absolute;
 }

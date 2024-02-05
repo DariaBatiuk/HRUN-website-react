@@ -46,8 +46,24 @@ span {
 .promo__btn {
   display: none;
 }
+@media only screen and (max-width: 1175px) {
+	.slidecontainer {
+    display: none; /* Скрыть слайдер на мобильных устройствах */
+  }
+	.promo__wrapper{
+		width: 600px;
+	}
+	.promo__header{
+		font-size: 36px;
+		line-height: normal;
+		text-align: center;
+	}
+	.promo__descr{
+		margin: 0 auto;
+	}
+}
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 767px) {
   .hamburger {
     display: block; /* Показать иконку гамбургера */
     cursor: pointer;
@@ -79,13 +95,16 @@ span {
     margin-left: 0 !important; 
   }
   h1 span:nth-child(3)::before {
-    margin-left: 0 !important; /* Отступ для третьей строки после <br> */
+    margin-left: 0 !important;
+		 /* Отступ для третьей строки после <br> */
   }
 	.promo__header{
-		top: 83px !important; 
+		/* top: 83px !important; */
+		left: 20%; 
 	}
   .promo__descr {
-    margin-left: 20%;
+    /* margin-left: 20%; */
+		margin-top: 55px;
     font-size: 16px;
     line-height: 24px;
     width: 210px;
@@ -103,4 +122,9 @@ span {
 	.promo__wrapper {
     width: 100%;
   }
+	@media only screen and (max-width: 425px) {
+		.promo__header{
+			left: 0;
+		}
+	}
 }

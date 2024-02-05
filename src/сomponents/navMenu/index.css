@@ -87,7 +87,8 @@
 .promo__link-img-hover {
   display: none;
 }
-@media only screen and (max-width: 425px) {
+
+@media only screen and (max-width: 767px) {
   .hamburger {
     display: block; /* Показываем кнопку гамбургера на мобильных устройствах */
   }
