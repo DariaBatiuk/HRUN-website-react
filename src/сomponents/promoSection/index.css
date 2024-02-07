@@ -48,7 +48,7 @@ span {
 }
 @media only screen and (max-width: 1175px) {
 	.slidecontainer {
-    display: none; /* Скрыть слайдер на мобильных устройствах */
+    /* display: none;  */
   }
 	.promo__wrapper{
 		width: 600px;
@@ -100,7 +100,8 @@ span {
   }
 	.promo__header{
 		/* top: 83px !important; */
-		left: 20%; 
+		left: 10%; 
+		right: 10%;
 	}
   .promo__descr {
     /* margin-left: 20%; */

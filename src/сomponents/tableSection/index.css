@@ -6,6 +6,7 @@ article {
 
 .service__header{
 	position: relative;
+	width: 100%;
 }
 .table__header {
   margin-top: 160px;
@@ -57,43 +58,58 @@ article {
   text-align: start;
   margin-right: 24px;
 }
-@media only screen and (max-width: 425px) {
-  .header {
-		position: relative;
-    margin-top: 0;
-    font-weight: 700;
-    line-height: 30px;
-  }
-  .table__subheader {
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 30px;
-		margin-bottom: 40px;
-  }
-	.categoryRow{
-		flex-direction: column;
+@media only screen and (max-width: 1290px) {
+	.service__header{
+		margin: 0 auto;
 	}
-	.categoryHeader{
-		width: 100%;
-		margin-right: 0;
+	.table__header, .table__subheader{
+		font-size: 46px;
+		line-height: normal;
 	}
 	.serviceImage{
-		max-width: 261px;
+		width: 100%;
 	}
+	.categoryRow{
+		flex-direction: column;
+	}	
 	.servicesWrapper {
 		margin-top: 26px;
-	}
-	.service__title{
-		width: 150px;
-		margin-right: 8px;
 	}
 	.serviceItem{
 		width: 100%;
 		justify-content: space-between;
 	}
 	.serviceItem__descr{
-		width: 50%;
+		width: 80%;
+	}
+}
+@media only screen and (max-width: 727px) {
+  .header {
+		position: relative;
+    margin-top: 0;
+    font-weight: 700;
+    line-height: 30px;
+  }
+	.table__header{
+		font-size: 28px;
+	}
+  .table__subheader {
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+		margin-bottom: 40px;
+  }	
+	.categoryHeader{
+		width: 100%;
+		margin-right: 0;
+	}
+	.service__title{
+		width: 150px;
+		margin-right: 8px;
+	}
+
+	.serviceItem__descr{
 		font-size: 19px;
 	}
 	.table__header{
@@ -102,5 +118,10 @@ article {
 	.img__service1_mobile{
 		position: absolute;
     top: -175%;
+	}
+}
+@media only screen and (max-width: 425px) {
+  .serviceImage{
+		max-width: 261px;
 	}
 }
