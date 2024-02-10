@@ -67,14 +67,13 @@ const Work = () => {
       description:
         "We helped create a service for securely selling photos and renders.",
     }
-    // ... Другие проекты
   ];
 
   return (
     <div className="work__page">
       <h1 className="h1 work__header">OUR WORK</h1>
       <ProjectsSection projects={projectsData} />
-			<Contact />
+			{/* <Contact /> */}
     </div>
   );
 };

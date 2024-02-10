@@ -14,13 +14,27 @@
   margin-bottom: 12px;
 }
 .project__image {
-  width: 640px;
+  width: 550px;
   height: 380px;
   border-radius: 20px;
   background: #edf8fe;
   background-size: cover;
   background-position: center;
   /* Другие стили, если необходимо */
+}
+@media only screen and (max-width: 1440px) {
+	.project__section{
+		justify-content: center;
+	}
+	.project__image{
+		width: 850px;
+	}
+}
+@media only screen and (max-width: 727px) {
+	.project__image{
+		width: 100%;
+		margin: 0 auto;
+	}
 }
 @media only screen and (max-width: 425px) {
   .work__header {
@@ -32,9 +46,7 @@
 		margin-bottom: 60px;
   }
   .project__image {
-    width: 100%;
     height: 240px;
-    margin: 0 auto;
     margin-bottom: 24px;
   }
   .project__subheader {
