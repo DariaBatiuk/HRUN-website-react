@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import "./index.css";
 import PrimaryBtn from "../primaryBtn/PrimaryBtn";
 import ContactWindow from '../contactWindow/ContactWindow';
+import PopUp from '../popup/PopUp';
 import img1_mobile from '../../img/promo__page_img/Group_mobile.png';
 import img1 from '../../img/promo__page_img/Group.png';
 import animation__promo from '../../img/animation__promo.gif';
@@ -44,6 +45,7 @@ function PromoSection() {
       </div>
       <PrimaryBtn className="promo__btn" onClick={handleContactBtnClick} />
       {isContactWindowVisible && <ContactWindow onClose={handleContactWindowClose} />}
+			<PopUp />
     </div>
   );
 }

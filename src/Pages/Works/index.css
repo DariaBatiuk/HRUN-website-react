@@ -26,8 +26,11 @@
 	.project__section{
 		justify-content: center;
 	}
+	.project__card{
+		padding: 0px 10px;
+	}
 	.project__image{
-		width: 850px;
+		width: 690px;
 	}
 }
 @media only screen and (max-width: 727px) {

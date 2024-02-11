@@ -81,25 +81,6 @@ label {
 }
 .contact__triggers {
   margin-top: -16px;
-  /* Скрываем оригинальный чекбокс */
-  /* // .checkbox {
-	//   display: none;
-	// } */
-
-  /* Стилизация метки, чтобы она выглядела как SVG */
-  /* // .checkbox + label {
-	//   display: inline-block;
-	//   width: 18px;
-	//   height: 18px;
-	//   background: url("../../icons/Group.svg") center center no-repeat;
-	//   cursor: pointer;
-	// } */
-
-  /* Определение стилей для отмеченного чекбокса */
-  /* // .checkbox:checked + label {
-	//   background: url("../../icons/Group.svg") center center no-repeat;
-	// 	color: #000;
-	// } */
 }
 .contact__policy {
   display: flex;
@@ -110,26 +91,33 @@ a {
   text-decoration: underline;
   color: #8e93a2;
 }
-@media only screen and (max-width: 425px) {
-  .contact {
+@media only screen and (max-width: 1140px) {
+	.contact {
     margin-top: 60px;
 		margin-bottom: 60px;
     flex-direction: column;
   }
-  .contact__wrapper {
+	.contact__wrapper {
     width: 100%;
   }
   .contact__title {
     margin-bottom: 8px;
   }
-  .contact__title,
-  .contact__subtitle {
-    line-height: normal;
-  }
-  .contact__descr {
+	.contact__descr {
     margin-top: 24px;
     margin-bottom: 41px;
     width: 100%;
+  }
+}
+@media only screen and (max-width: 727px) { 
+	.contact__input {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 425px) { 
+  .contact__title,
+  .contact__subtitle {
+    line-height: normal;
   }
   .contact__descr div {
     display: inline; /* Элементы будут отображаться строчно */
@@ -143,9 +131,6 @@ a {
   }
   .contact__feed-form {
     row-gap: 12px;
-  }
-  .contact__input {
-    width: 100%;
   }
   .contact__comment {
     margin-bottom: 0;

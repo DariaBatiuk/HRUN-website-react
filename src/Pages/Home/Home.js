@@ -11,9 +11,9 @@ function Home() {
 		<div>
 			<PromoSection />
 			{/* <ContactWindow /> */}
-			{/* <Approach />
+			<Approach />
 			<Service />
-			<Contact /> */}
+			<Contact />
 		</div>
 	)
 }

@@ -10,7 +10,7 @@
 .img2{
 	margin-top: -5%;
 }
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 1140px) {
 	.approach{
 		flex-direction: column;
 	}
@@ -18,6 +18,8 @@
 		width: 100%;
 		position: relative;
 	}
+}
+@media only screen and (max-width: 425px) {	
   .approach__title {
     font-size: 20px;
     font-weight: 700;

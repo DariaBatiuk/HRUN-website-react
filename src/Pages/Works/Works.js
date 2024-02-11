@@ -23,7 +23,7 @@ const ProjectsSection = ({ projects }) => (
   </div>
 );
 
-// // Компонент для контактной формы
+// Компонент для контактной формы
 // const ContactForm = () => (
 //   <form className="contact__form">
 //     {/* Форма контактов с полями ввода */}
@@ -73,7 +73,7 @@ const Work = () => {
     <div className="work__page">
       <h1 className="h1 work__header">OUR WORK</h1>
       <ProjectsSection projects={projectsData} />
-			{/* <Contact /> */}
+			<Contact />
     </div>
   );
 };

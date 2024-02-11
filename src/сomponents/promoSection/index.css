@@ -51,7 +51,7 @@ span {
     /* display: none;  */
   }
 	.promo__wrapper{
-		width: 600px;
+		width: 100%;
 	}
 	.promo__header{
 		font-size: 36px;
