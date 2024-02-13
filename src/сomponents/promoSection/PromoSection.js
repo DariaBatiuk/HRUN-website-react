@@ -10,6 +10,7 @@ import animation__promo from '../../img/animation__promo.gif';
 function PromoSection() {
   const [isContactWindowVisible, setContactWindowVisibility] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+	const [isPopUpVisible, setPopUpVisibility] = useState(true);
 
   useEffect(() => {
     const handleResize = () => {
@@ -26,6 +27,10 @@ function PromoSection() {
 
   const handleContactWindowClose = () => {
     setContactWindowVisibility(false);
+  };
+
+	const handlePopUpClose = () => {
+    setPopUpVisibility(false);
   };
 
   const imageSource = windowWidth >= 425 ? img1 : img1_mobile; 
@@ -45,7 +50,7 @@ function PromoSection() {
       </div>
       <PrimaryBtn className="promo__btn" onClick={handleContactBtnClick} />
       {isContactWindowVisible && <ContactWindow onClose={handleContactWindowClose} />}
-			<PopUp />
+			{isPopUpVisible && <PopUp onClose={handlePopUpClose}/>}
     </div>
   );
 }
