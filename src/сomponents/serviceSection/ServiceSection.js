@@ -6,25 +6,27 @@ import img3 from "../../img/promo__page_img/Img3.png";
 import img3_mobile from "../../img/promo__page_img/Img3_mobile.png";
 import ServiceImg1 from "../../img/promo__page_img/Service__img1.png";
 import ServiceImg2 from "../../img/promo__page_img/Service__img2.png";
-import SecondaryBtn from "../SecondaryBtn/SecondaryBtn";
-import PrimaryBtn from "../primaryBtn/PrimaryBtn";
+
 import SliderBtn from "../sliderBtn/SliderBtn";
+import slider__btn_mini from "../../img/promo__page_img/slider__btn.png";
 
 function Slider({ slidesData }) {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [activeIndicator, setActiveIndicator] = useState(0);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slidesData.length);
+    setActiveIndicator((prev) => (prev + 1) % 2); // Переключаем активную полосу
   };
 
-  const prevSlide = () => {
-    setCurrentSlide(
-      (prev) => (prev - 1 + slidesData.length) % slidesData.length
-    );
-  };
+  // const prevSlide = () => {
+  //   setCurrentSlide(
+  //     (prev) => (prev - 1 + slidesData.length) % slidesData.length
+  //   );
+  // };
 
   return (
-    <div className="service__slider">     
+    <div className="service__slider">
       {slidesData.map(
         (slide, index) =>
           currentSlide === index && (
@@ -33,18 +35,36 @@ function Slider({ slidesData }) {
               <div className="service__slider_content">
                 <h2 className="service__slider_header">{slide.header}</h2>
                 <p className="service__slider_descr">{slide.descr}</p>
-								<SliderBtn />
+              </div>
+
+              <div className="scrollIndicatorContainer">
+                <div
+                  className={`scrollProgress ${activeIndicator === 0 ? "active__scroll" : ""}`}
+                  style={{
+                    height: `50%`,
+                    marginBottom: "5px",
+                  }}
+                ></div>
+                <div
+                  className={`scrollProgress2 ${activeIndicator === 1 ? "active__scroll" : ""}`}
+                  style={{
+                    height: `50%`,
+                  }}
+                ></div>
+                <button className="nextSlideBtn" onClick={nextSlide}>
+                  <img src={slider__btn_mini} alt="Next" />
+                </button>
               </div>
             </div>
           )
       )}
-      <button className="service__slider_btn" onClick={nextSlide}>&gt;</button>
     </div>
   );
 }
 
 function ServiceSection() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
     const handleResize = () => {
@@ -73,11 +93,14 @@ function ServiceSection() {
     },
   ];
 
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slidesData.length);
+  };
+
   return (
     <section className="serviceSection">
-      {/* Здесь начинается закомментированная часть */}
-      {/* <div className="h1">OUR SERVICES</div>
-      <div className="service__wrapper">
+      {/* <div className="h1">OUR SERVICES</div> */}
+      {/* <div className="service__wrapper">
         <img src={imageSource} alt="Service" className="img3" />
         <div className="service__descr">
           <p className="p1">
@@ -103,8 +126,9 @@ function ServiceSection() {
           </ul>
         </div>
       </div> */}
-      {/* Здесь заканчивается закомментированная часть */}
+
       <Slider slidesData={slidesData} />
+      {/* Добавление полосы прокрутки и кнопки переключения */}
     </section>
   );
 }
