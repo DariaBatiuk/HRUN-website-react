@@ -9,11 +9,11 @@ import ContactWindow from '../../сomponents/contactWindow/ContactWindow';
 function Home() {
 	return (
 		<div>
-			{/* <PromoSection /> */}
+			<PromoSection />
 			{/* <ContactWindow /> */}
-			{/* <Approach /> */}
+			<Approach />
 			<Service />
-			{/* <Contact /> */}
+			<Contact />
 		</div>
 	)
 }
