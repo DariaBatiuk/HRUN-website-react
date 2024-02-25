@@ -37,7 +37,7 @@ span {
 .promo__descr {
   position: relative;
   margin-left: 330px;
-  margin-bottom: 229px;
+  margin-bottom: 50px;
   width: 420px;
 }
 .mobile-btn {
@@ -54,12 +54,14 @@ span {
 		width: 100%;
 	}
 	.promo__header{
+		left: 10%; 
+		right: 10%;
 		font-size: 36px;
 		line-height: normal;
 		text-align: center;
 	}
 	.promo__descr{
-		margin: 0 auto;
+		margin: 0 auto 50px auto;
 	}
 }
 
@@ -100,8 +102,6 @@ span {
   }
 	.promo__header{
 		/* top: 83px !important; */
-		left: 10%; 
-		right: 10%;
 	}
   .promo__descr {
     /* margin-left: 20%; */

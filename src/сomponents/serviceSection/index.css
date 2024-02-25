@@ -102,10 +102,19 @@
   margin-top: 10px; /* Автоматический отступ сверху для второй полосы */
 	width: 100%;
 	background: #C5E6EA;
+	border-radius: 4px;
 }
 
 .active__scroll {
   background: #2EC3E2; /* Цвет фона для активного состояния */
+}
+.scrollProgress, .scrollProgress2 {
+  height: 50%; /* Высота неактивного индикатора */
+  margin-bottom: 5px; /* Отступ для верхнего индикатора */
+}
+
+.scrollProgress2 {
+  margin-bottom: 0; /* Убрать нижний отступ для последнего индикатора */
 }
 
 .nextSlideBtn {
@@ -139,6 +148,49 @@
 	.mobile-no-break {
     display: inline; /* Убирает эффект блочного элемента, предотвращая перенос */
   }
+}
+@media only screen and (max-width: 967px){
+	.service__slide{
+		flex-direction: column;
+	}
+	.scrollIndicatorContainer{
+		top: 25%;
+	}
+	.service__slider_img{
+		margin-bottom: 30px;
+	}	
+	.service__slider_content{
+		width: 80%;
+		text-align: center;
+	}
+}
+@media only screen and (max-width: 768px) {
+
+  .scrollIndicatorContainer {
+    position: relative; /* Изменяем позиционирование на относительное */
+    bottom: auto; /* Убираем смещение снизу */
+    height: 10px; /* Убираем фиксированную высоту */
+    width: 60%; /* Устанавливаем ширину полосы */
+    flex-direction: row; /* Меняем направление элементов на горизонтальное */
+    justify-content: space-between; /* Распределяем элементы равномерно */
+    margin-top: 20px; /* Добавляем отступ сверху, чтобы отделить от картинки */
+  }
+
+  .scrollProgress, .scrollProgress2, .active__scroll {
+    height: 10px; /* Устанавливаем высоту индикаторов */
+    width: 45%; /* Устанавливаем ширину индикаторов */
+    margin: 0; /* Убираем нижний отступ */
+  }
+
+  /* Переопределение стилей для кнопки, если требуется */
+  .nextSlideBtn {
+    position: relative; /* Изменяем позиционирование на относительное */
+    bottom: auto; /* Убираем смещение снизу */
+    /* Другие необходимые стили для кнопки */
+  }
+	.service__slider_img{
+		width: 100%;
+	}
 }
 @media only screen and (max-width: 425px) {
 	.serviceSection{

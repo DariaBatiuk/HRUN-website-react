@@ -6,6 +6,7 @@ import PopUp from '../popup/PopUp';
 import img1_mobile from '../../img/promo__page_img/Group_mobile.png';
 import img1 from '../../img/promo__page_img/Group.png';
 import animation__promo from '../../img/animation__promo.gif';
+import CalculatorBtn from '../calculatorBtn/CalculatorBtn';
 
 function PromoSection() {
   const [isContactWindowVisible, setContactWindowVisibility] = useState(false);
@@ -47,6 +48,7 @@ function PromoSection() {
         <p className="promo__descr p1">
           More profit, less worry. We can help you to provide comprehensive branding services including brand identity development.
         </p>
+				<CalculatorBtn />
       </div>
       <PrimaryBtn className="promo__btn" onClick={handleContactBtnClick} />
       {isContactWindowVisible && <ContactWindow onClose={handleContactWindowClose} />}

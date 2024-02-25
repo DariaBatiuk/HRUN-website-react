@@ -19,11 +19,6 @@ function Slider({ slidesData }) {
     setActiveIndicator((prev) => (prev + 1) % 2); // Переключаем активную полосу
   };
 
-  // const prevSlide = () => {
-  //   setCurrentSlide(
-  //     (prev) => (prev - 1 + slidesData.length) % slidesData.length
-  //   );
-  // };
 
   return (
     <div className="service__slider">
@@ -31,7 +26,7 @@ function Slider({ slidesData }) {
         (slide, index) =>
           currentSlide === index && (
             <div key={slide.id} className="service__slide">
-              <img src={slide.img} alt={`Slide ${slide.id}`} />
+              <img src={slide.img} alt={`Slide ${slide.id}`} className="service__slider_img" />
               <div className="service__slider_content">
                 <h2 className="service__slider_header">{slide.header}</h2>
                 <p className="service__slider_descr">{slide.descr}</p>
@@ -40,16 +35,9 @@ function Slider({ slidesData }) {
               <div className="scrollIndicatorContainer">
                 <div
                   className={`scrollProgress ${activeIndicator === 0 ? "active__scroll" : ""}`}
-                  style={{
-                    height: `50%`,
-                    marginBottom: "5px",
-                  }}
                 ></div>
                 <div
                   className={`scrollProgress2 ${activeIndicator === 1 ? "active__scroll" : ""}`}
-                  style={{
-                    height: `50%`,
-                  }}
                 ></div>
                 <button className="nextSlideBtn" onClick={nextSlide}>
                   <img src={slider__btn_mini} alt="Next" />
