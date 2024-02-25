@@ -32,7 +32,10 @@ const PopUp = ({ onClose }) => {
 
   return (
     <div className='popup'>
-      <a href='#' onClick={onClose}>
+      <a href='#' onClick={(event)=>{
+				event.preventDefault();
+				onClose();
+			}}>
         <img src={miniCross} alt="popup__cross" className="popup__cross"/>
       </a>
       <div className='popup__wrapper'>
