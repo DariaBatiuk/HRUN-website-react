@@ -2,11 +2,16 @@ import React, { useState, useEffect } from 'react';
 import './index.css';
 import img2 from '../../img/promo__page_img/Img2.png';
 import img2_mobile from '../../img/promo__page_img/Img2_mobile.png';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 function Approach() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
+		animationApproach();
+
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
@@ -17,6 +22,32 @@ function Approach() {
 
   const imageSource = windowWidth >= 425 ? img2 : img2_mobile; // предполагаем, что 768px - это пороговое значение для мобильных устройств
 
+	function animationApproach() {
+
+		const tlImages = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".promo",
+				start: "top top",
+				end: "+=50%",
+				scrub: 1,
+			},
+		});
+		
+		tlImages.to(".approach", {
+			duration: 1,
+			opacity: 1,
+			y: 0,
+		});
+		tlImages.fromTo(
+			".img2",
+			{ y: 80 },
+			{
+				y: -40,
+			},
+			"<"
+		);
+		
+  }
   return (
     <div>
       <section className="approach">

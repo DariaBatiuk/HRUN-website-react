@@ -19,6 +19,7 @@
 	width: 65%;
 }
 .service__list {
+	opacity: 0;
 	margin: 24px 0;
 	display: flex;
 	justify-content: space-between;
@@ -125,7 +126,9 @@
   background: white;
 	cursor: pointer;
 }
-
+.service__span{
+	font-weight: normal;
+}
 
 
 @media only screen and (max-width: 1140px) {
@@ -154,7 +157,7 @@
 		flex-direction: column;
 	}
 	.scrollIndicatorContainer{
-		top: 25%;
+		top: 10%;
 	}
 	.service__slider_img{
 		margin-bottom: 30px;

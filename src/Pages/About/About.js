@@ -15,11 +15,15 @@ import img__about3 from "../../img/about__page_img/img__about3.png";
 import img__about3_mobile from "../../img/about__page_img/img__about3_mobile.png";
 import img__about4 from "../../img/about__page_img/img__about4.png";
 import img__about4_mobile from "../../img/about__page_img/img__about4_mobile.png";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const SectionHeader = ({ title }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 425);
 
   useEffect(() => {
+		animationAbout()
     const handleResize = () => {
       setIsMobile(window.innerWidth < 425);
     };
@@ -29,6 +33,22 @@ const SectionHeader = ({ title }) => {
   }, []);
 
   const imageSource = isMobile ? img__about1_mobile : img__about1;
+
+	function animationAbout() {
+    gsap.to(".valueBlock", {
+			stagger: 0.3,
+			duration: 1,
+      opacity: 1,
+      yPercent: -100,
+      scrollTrigger: {
+        trigger: ".about__values",
+        start: "top 60%",
+				toggleActions: "play none none reverse",
+        end: "bottom bottom",
+        scrub: 1,
+      },
+    });
+  }
 
   return (
     <div className="sectionHeader">
@@ -138,3 +158,4 @@ const About = () => (
 );
 
 export default About;
+

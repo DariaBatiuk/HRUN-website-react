@@ -46,19 +46,26 @@ article {
 }
 .serviceImage {
 	position: absolute;
-    top: -120%;
+  top: -100%;
+	width: 100%;
 }
 .servicesWrapper {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
+.service__section{
+	position: relative;
+	transform: translateY(100%);
+  overflow: hidden;
+
+}
 .service__title {
   width: 183px;
   text-align: start;
   margin-right: 24px;
 }
-@media only screen and (max-width: 1290px) {
+@media only screen and (max-width: 967px) {
 	.service__header{
 		margin: 0 auto;
 	}

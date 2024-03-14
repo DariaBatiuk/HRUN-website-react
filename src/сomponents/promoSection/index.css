@@ -1,17 +1,19 @@
 .promo {
-  min-height: 100vh;
-  /* // position: relative; */
+  /* min-height: 100vh; */
+  position: relative;
   background: #fefeff no-repeat 50% / cover;
   padding: 0;
 
 }
 .promo__wrapper {
-	position: relative;
+	/* position: relative; */
   display: flex;
   width: 1155px;
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
+	transform: translateY(100%); /* Скрываем блок за пределами видимой области */
+    overflow: hidden;
 }
 .promo__header{
 	position: absolute;

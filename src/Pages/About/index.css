@@ -38,6 +38,8 @@
 .valueBlock {
   text-align: start;
   padding: 20px;
+	opacity: 0;
+	transform: translateY(100%);
 }
 .value__title__wrapper {
   display: flex;

@@ -6,6 +6,9 @@ import largeBusinessData from "./largeBusinessServices/largeBusinessData";
 import img__service1 from '../../img/Service__page_img/Img_service1.png';
 import img__service1_mobile from '../../img/Service__page_img/Img__service1_mobile.png';
 import "./index.css";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const ServiceItem = ({ title, description }) => (
   <div className="serviceItem">
@@ -19,11 +22,24 @@ ServiceItem.propTypes = {
   description: PropTypes.string.isRequired,
 };
 
+
+function animationService() {
+	const tlPromo = gsap.timeline({});
+	tlPromo
+		.to(".service__section", {
+			duration: 1.2,
+			y: 0,
+			ease: "back.out(1.1)",
+		},
+		"<"
+	);
+}
+
 const CategoryRow = ({ category, services, img }) => (
-  <article className="categoryRow">
+	<article className="categoryRow">
     <div className="categoryHeader">
       <div className="h3 category">{category}</div>
-      <img src={img} alt={category} className="serviceImage" />
+      <img src={img} alt={category} className="serviceImage__arrow" />
     </div>
     <div className="servicesWrapper">
       {services.map((service, index) => (
@@ -35,6 +51,8 @@ const CategoryRow = ({ category, services, img }) => (
       ))}
     </div>
   </article>
+
+ 
 );
 
 CategoryRow.propTypes = {
@@ -52,6 +70,8 @@ const BusinessSection = ({ title, subtitle, data }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
+		animationService();
+
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
@@ -63,7 +83,7 @@ const BusinessSection = ({ title, subtitle, data }) => {
   const imageSource = windowWidth >= 425 ? img__service1 : img__service1_mobile; 
 
   return (
-    <>
+    <div className="service__section">
       <header className="service__header">
         <h2 className="h1 table__header">{title}</h2>
         <img src={imageSource} alt="Service" className="serviceImage" />
@@ -72,7 +92,7 @@ const BusinessSection = ({ title, subtitle, data }) => {
       {data.map((table, index) => (
         <CategoryRow key={index} {...table} />
       ))}
-    </>
+    </div>
   );
 };
 
