@@ -39,10 +39,10 @@ const SectionHeader = ({ title }) => {
 			stagger: 0.3,
 			duration: 1,
       opacity: 1,
-      yPercent: -100,
+      yPercent: -90,
       scrollTrigger: {
         trigger: ".about__values",
-        start: "top 60%",
+        start: "top 40%",
 				toggleActions: "play none none reverse",
         end: "bottom bottom",
         scrub: 1,

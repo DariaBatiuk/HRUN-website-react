@@ -107,7 +107,7 @@ function ServiceSection() {
       yPercent: 50,
       scrollTrigger: {
         trigger: ".serviceSection",
-        start: "top 20%",
+        start: "top 30%",
 				toggleActions: "play none none reverse",
         end: "bottom bottom",
         scrub: 1,

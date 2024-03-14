@@ -20,20 +20,20 @@ function Footer() {
           </Link>
         </div>
         <div className="footer__social">
-          <div className='footer__social_icons'>
+          <a className='footer__social_icons' href="https://www.facebook.com/profile.php?id=100093553358240" target="_blank" rel="noopener noreferrer">
             <img src={fb} alt="facebook" className="footer__social_icon" id="footer__social_icon"/>
 						<img src={fb_hover} alt="facebook" className="footer__social_icon_hover" />
-          </div>
+          </a>
 
-          <div className='footer__social_icons'>
+          <a className='footer__social_icons' href="#" target="_blank" rel="noopener noreferrer">
             <img src={inst} alt="instagram" className="footer__social_icon"/>
 						<img src={inst_hoevr} alt="facebook" className="footer__social_icon_hover" />
-          </div>
+          </a>
 
-          <div className='footer__social_icons'>
+          <a className='footer__social_icons' href="https://www.linkedin.com/company/hrundigital" target="_blank" rel="noopener noreferrer">
             <img src={linkedin} alt="linkedin" className="footer__social_icon"/>
 						<img src={linkedin_hover} alt="facebook" className="footer__social_icon_hover" />
-          </div>
+          </a>
         </div>
         <div className="footer__copyrite">Copyright 2023. All rights reserved</div>
       </div>
@@ -66,9 +66,12 @@ function Footer() {
         <div className="footer__subheader">
           <div className="footer__subheader_item">Moncton, NB, Canada</div>
           <div className="footer__subheader_item">
-            Email: <br /> marketing@hrun.pro
+            Email: <br /> 
+						<a className='footer__subheader_item' href="mailto:marketing@hrun.pro">marketing@hrun.pro</a>
           </div>
-          <div className="footer__subheader_item">+1506 567 6777</div>
+          <div className="footer__subheader_item">
+						<a className='footer__subheader_item' href="tel:+15065676777">+1506 567 6777</a>
+					</div>
         </div>
       </div>{" "}
     </footer>
