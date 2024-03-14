@@ -20,8 +20,16 @@
   background: #edf8fe;
   background-size: cover;
   background-position: center;
-  /* Другие стили, если необходимо */
 }
+.project__image:hover {
+  transform: scale(1.1); /* Увеличивает изображение на 10% */
+  transition: transform 0.3s ease-in-out; /* Плавное увеличение и уменьшение */
+}
+
+.project__card {
+  overflow: hidden; /* Гарантирует, что увеличенное изображение не выйдет за пределы карточки */
+}
+
 @media only screen and (max-width: 1440px) {
 	.project__section{
 		justify-content: center;

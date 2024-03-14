@@ -77,6 +77,15 @@
 .mobile-only-btn {
   display: none;
 }
+.team__img:hover{
+	transform: scale(1.1); /* Увеличивает изображение на 10% */
+  transition: transform 0.3s ease-in-out; /* Плавное увеличение и уменьшение */
+}
+.teamMember{
+	overflow: hidden;
+	border-radius: 20px;
+}
+
 @media only screen and (max-width: 1130px) {
 	.about_header_image{
 		width: 50%;
